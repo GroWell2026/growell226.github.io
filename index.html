@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+content="width=device-width,
+initial-scale=1.0">
+<title>GroWell — Transforming 
+Pediatric Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" 
+rel="stylesheet">
+<style>
+*{margin:0;padding:0;
+box-sizing:border-box}
+body{font-family:'Inter',sans-serif;
+background:#3D3D3D;color:#fff;
+min-height:100vh}
+nav{position:fixed;top:0;left:0;
+right:0;background:rgba(44,44,44,0.96);
+border-bottom:1px solid 
+rgba(255,255,255,0.1);z-index:100;
+padding:0 24px}
+.ni{max-width:1100px;margin:0 auto;
+height:70px;display:flex;
+align-items:center;
+justify-content:space-between}
+.logo{display:flex;
+align-items:flex-end;gap:10px}
+.bars{display:flex;
+align-items:flex-end;gap:3px;
+height:24px}
+.bar{width:6px;
+border-radius:2px 2px 0 0}
+.b1{height:40%;background:#E05A4E}
+.b2{height:68%;background:#F0A500}
+.b3{height:100%;background:#4CAF50}
+.lt{font-size:20px;font-weight:700;
+color:#fff}
+.nb{background:#fff;color:#2C2C2C;
+padding:10px 20px;border-radius:8px;
+font-weight:700;font-size:14px;
+text-decoration:none}
+.hero{min-height:100vh;display:flex;
+align-items:center;
+padding:120px 24px 80px}
+.hw{max-width:1100px;
+margin:0 auto;width:100%}
+.badge{display:inline-flex;
+align-items:center;gap:8px;
+background:rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:100px;padding:8px 16px;
+font-size:13px;font-weight:600;
+color:rgba(255,255,255,0.8);
+margin-bottom:28px}
+.dot{width:7px;height:7px;
+background:#4CAF50;border-radius:50%;
+animation:blink 2s infinite}
+@keyframes blink{
+0%,100%{opacity:1}
+50%{opacity:0.4}}
+h1{font-size:clamp(36px,5vw,58px);
+font-weight:800;line-height:1.1;
+letter-spacing:-1.5px;
+margin-bottom:20px;color:#fff;
+max-width:700px}
+h1 span{background:linear-gradient(
+135deg,#4CAF50,#0D9488);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text}
+.tl{font-size:16px;font-weight:700;
+color:rgba(255,255,255,0.8);
+margin-bottom:16px}
+.sub{font-size:17px;
+color:rgba(255,255,255,0.6);
+line-height:1.7;margin-bottom:40px;
+max-width:580px}
+.btns{display:flex;gap:16px;
+flex-wrap:wrap;margin-bottom:40px}
+.bw{background:#fff;color:#2C2C2C;
+padding:14px 28px;border-radius:8px;
+font-size:15px;font-weight:700;
+border:none;cursor:pointer;
+text-decoration:none;
+transition:all 0.2s;
+display:inline-block}
+.bw:hover{background:
+rgba(255,255,255,0.85);
+transform:translateY(-2px)}
+.bo{background:transparent;color:#fff;
+padding:14px 28px;border-radius:8px;
+font-size:15px;font-weight:600;
+border:1px solid rgba(255,255,255,0.3);
+cursor:pointer;text-decoration:none;
+transition:all 0.2s;
+display:inline-block}
+.bo:hover{background:
+rgba(255,255,255,0.1);
+transform:translateY(-2px)}
+.chips{display:flex;
+align-items:center;gap:10px;
+flex-wrap:wrap}
+.chip{background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:6px;padding:5px 10px;
+font-size:11px;font-weight:600;
+color:rgba(255,255,255,0.6)}
+.stats{background:#2C2C2C;
+padding:48px 24px}
+.si{max-width:1100px;margin:0 auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;text-align:center}
+@media(max-width:700px){
+.si{grid-template-columns:
+repeat(2,1fr)}}
+.sn{font-size:40px;font-weight:800;
+line-height:1;margin-bottom:6px}
+.sg{color:#4CAF50}
+.so{color:#F0A500}
+.sr{color:#E05A4E}
+.sw{color:#fff}
+.sl{font-size:13px;
+color:rgba(255,255,255,0.5);
+font-weight:500}
+.sec{padding:80px 24px}
+.seca{background:#474747}
+.w{max-width:1100px;margin:0 auto}
+.tag{display:inline-block;
+background:rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.2);
+color:rgba(255,255,255,0.8);
+font-size:12px;font-weight:600;
+letter-spacing:0.08em;
+text-transform:uppercase;
+padding:6px 14px;border-radius:100px;
+margin-bottom:16px}
+h2{font-size:clamp(28px,4vw,42px);
+font-weight:800;color:#fff;
+line-height:1.2;margin-bottom:16px;
+letter-spacing:-0.5px}
+h2 span{color:#4CAF50}
+.lead{font-size:18px;
+color:rgba(255,255,255,0.6);
+max-width:600px;line-height:1.7;
+margin-bottom:48px}
+.cen{text-align:center}
+.cen .lead{margin:0 auto 48px}
+.g3{display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px}
+@media(max-width:768px){
+.g3{grid-template-columns:1fr}}
+.g4{display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px}
+@media(max-width:900px){
+.g4{grid-template-columns:
+repeat(2,1fr)}}
+@media(max-width:500px){
+.g4{grid-template-columns:1fr}}
+.card{background:#474747;
+border-radius:20px;padding:36px 28px;
+border:1px solid rgba(255,255,255,0.1);
+transition:all 0.3s;position:relative;
+overflow:hidden}
+.seca .card{background:#3D3D3D}
+.card::before{content:'';
+position:absolute;top:0;left:0;
+right:0;height:3px;
+transform:scaleX(0);
+transition:transform 0.3s}
+.cr::before{background:#E05A4E}
+.co::before{background:#F0A500}
+.cg::before{background:#4CAF50}
+.card:hover{transform:translateY(-4px);
+border-color:rgba(255,255,255,0.2);
+box-shadow:0 8px 40px 
+rgba(0,0,0,0.5)}
+.card:hover::before{
+transform:scaleX(1)}
+.bn{font-size:52px;font-weight:800;
+line-height:1;margin-bottom:8px;
+letter-spacing:-2px}
+.cr .bn{color:#E05A4E}
+.co .bn{color:#F0A500}
+.cg .bn{color:#4CAF50}
+.card h3{font-size:17px;
+font-weight:700;color:#fff;
+margin-bottom:10px}
+.card p{font-size:14px;
+color:rgba(255,255,255,0.6);
+line-height:1.6}
+.src{font-size:11px;
+color:rgba(255,255,255,0.3);
+margin-top:16px;font-style:italic}
+.step{background:#474747;
+border-radius:20px;
+padding:32px 20px;text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+transition:all 0.3s}
+.seca .step{background:#3D3D3D}
+.step:hover{transform:translateY(-4px);
+border-color:rgba(255,255,255,0.2);
+box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.stn{width:52px;height:52px;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+border:2px solid rgba(255,255,255,0.2);
+color:#fff;font-size:18px;
+font-weight:800;display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 14px;
+transition:all 0.3s}
+.step:hover .stn{background:#4CAF50;
+border-color:#4CAF50}
+.sti{font-size:28px;margin-bottom:12px}
+.step h3{font-size:16px;font-weight:700;
+color:#fff;margin-bottom:10px}
+.step p{font-size:13px;
+color:rgba(255,255,255,0.6);
+line-height:1.6}
+.vc{background:#474747;
+border-radius:20px;padding:36px 28px;
+border:1px solid rgba(255,255,255,0.1);
+transition:all 0.3s}
+.seca .vc{background:#3D3D3D}
+.vc:hover{transform:translateY(-4px);
+border-color:rgba(255,255,255,0.2);
+box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+.vi{width:52px;height:52px;
+background:rgba(255,255,255,0.1);
+border-radius:10px;display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;margin-bottom:20px}
+.vsub{font-size:12px;font-weight:600;
+color:#4CAF50;text-transform:uppercase;
+letter-spacing:0.06em;margin-bottom:8px}
+.vc h3{font-size:18px;font-weight:700;
+color:#fff;margin-bottom:12px}
+.vc p{font-size:14px;
+color:rgba(255,255,255,0.6);
+line-height:1.7}
+.fl{list-style:none;margin-top:16px}
+.fl li{font-size:13px;
+color:rgba(255,255,255,0.6);
+padding:5px 0 5px 20px;
+position:relative}
+.fl li::before{content:'✓';
+position:absolute;left:0;
+color:#4CAF50;font-weight:700}
+.vw{display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;align-items:center}
+@media(max-width:768px){
+.vw{grid-template-columns:1fr;
+gap:40px}}
+.vg{display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px}
+.vb{background:#474747;
+border-radius:14px;padding:28px 20px;
+border:1px solid rgba(255,255,255,0.1);
+text-align:center;transition:all 0.3s}
+.vb:hover{border-color:
+rgba(255,255,255,0.2)}
+.vb.hl{background:#4CAF50;
+border-color:#4CAF50}
+.vn{font-size:40px;font-weight:800;
+color:#4CAF50;line-height:1;
+margin-bottom:8px}
+.vb.hl .vn{color:#fff}
+.vl{font-size:13px;
+color:rgba(255,255,255,0.6);
+font-weight:500;line-height:1.4}
+.vb.hl .vl{color:rgba(255,255,255,0.85)}
+.vnote{font-size:13px;
+color:rgba(255,255,255,0.4);
+font-style:italic;margin-top:16px;
+padding-top:16px;border-top:1px solid
+rgba(255,255,255,0.1)}
+.ac{border-radius:20px;
+padding:40px 32px;transition:all 0.3s}
+.ac:hover{transform:translateY(-4px);
+box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+.a1{background:linear-gradient(
+135deg,#2a5a2a,#3d7a3d);
+border:1px solid rgba(76,175,80,0.3)}
+.a2{background:#474747;
+border:1px solid rgba(255,255,255,0.1)}
+.a3{background:linear-gradient(
+135deg,#2C2C2C,#1a1a2e);
+border:1px solid rgba(255,255,255,0.1)}
+.ai{font-size:36px;margin-bottom:20px}
+.ac h3{font-size:20px;font-weight:700;
+color:#fff;margin-bottom:12px}
+.ac p{font-size:14px;
+color:rgba(255,255,255,0.6);
+line-height:1.7}
+.al{list-style:none;margin-top:20px}
+.al li{font-size:13px;
+color:rgba(255,255,255,0.6);
+padding:6px 0 6px 20px;
+position:relative}
+.al li::before{content:'→';
+position:absolute;left:0;
+color:#4CAF50;font-weight:700}
+.tgrid{display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;max-width:800px;
+margin:0 auto 48px}
+@media(max-width:600px){
+.tgrid{grid-template-columns:1fr}}
+.tc{background:#474747;
+border-radius:20px;padding:32px;
+border:1px solid rgba(255,255,255,0.1);
+display:flex;gap:20px;
+align-items:flex-start;
+transition:all 0.3s}
+.tc:hover{transform:translateY(-4px);
+border-color:rgba(255,255,255,0.2)}
+.av{width:70px;height:70px;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+border:2px solid rgba(255,255,255,0.2);
+display:flex;align-items:center;
+justify-content:center;
+font-size:22px;font-weight:800;
+color:#fff;flex-shrink:0;overflow:hidden}
+.av img{width:100%;height:100%;
+object-fit:cover}
+.tn{font-size:18px;font-weight:700;
+color:#fff;margin-bottom:4px}
+.tr{font-size:13px;font-weight:600;
+color:#4CAF50;margin-bottom:10px}
+.tb{font-size:13px;
+color:rgba(255,255,255,0.6);
+line-height:1.6}
+.arow{text-align:center}
+.albl{font-size:12px;font-weight:600;
+color:rgba(255,255,255,0.4);
+text-transform:uppercase;
+letter-spacing:0.08em;margin-bottom:16px}
+.achips{display:flex;
+justify-content:center;
+gap:12px;flex-wrap:wrap}
+.achip{background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:100px;padding:10px 20px;
+font-size:13px;font-weight:600;
+color:rgba(255,255,255,0.7)}
+.cta{background:#2C2C2C;
+padding:96px 24px}
+.ctai{max-width:1100px;margin:0 auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:64px;align-items:center}
+@media(max-width:768px){
+.ctai{grid-template-columns:1fr}}
+.ctasub{font-size:18px;
+color:rgba(255,255,255,0.6);
+line-height:1.7;margin-top:16px}
+.fbox{background:#3D3D3D;
+border-radius:20px;padding:40px;
+border:1px solid rgba(255,255,255,0.1)}
+.fbox h3{font-size:20px;font-weight:700;
+color:#fff;margin-bottom:24px}
+.frow{display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;margin-bottom:14px}
+@media(max-width:500px){
+.frow{grid-template-columns:1fr}}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:13px;
+font-weight:600;
+color:rgba(255,255,255,0.7);
+margin-bottom:6px}
+.fg input,.fg select,.fg textarea{
+width:100%;padding:12px 14px;
+background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:8px;font-size:14px;
+font-family:inherit;color:#fff;
+outline:none;transition:border-color 0.2s}
+.fg input::placeholder,
+.fg textarea::placeholder{
+color:rgba(255,255,255,0.3)}
+.fg input:focus,.fg select:focus,
+.fg textarea:focus{
+border-color:#4CAF50;
+box-shadow:0 0 0 3px 
+rgba(76,175,80,0.15)}
+.fg select option{
+background:#3D3D3D;color:#fff}
+.fg textarea{resize:vertical;
+min-height:80px}
+.fsub{width:100%;background:#fff;
+color:#2C2C2C;padding:14px;
+border-radius:8px;font-size:15px;
+font-weight:700;border:none;
+cursor:pointer;transition:all 0.2s;
+margin-top:4px}
+.fsub:hover{
+background:rgba(255,255,255,0.85);
+transform:translateY(-1px)}
+footer{background:#2C2C2C;
+border-top:1px solid 
+rgba(255,255,255,0.1);
+padding:48px 24px 32px}
+.fwrap{max-width:1100px;margin:0 auto}
+.ftop{display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:40px;
+flex-wrap:wrap;gap:32px}
+.fbrand p{font-size:14px;
+color:rgba(255,255,255,0.5);
+margin-top:12px;max-width:280px;
+line-height:1.6}
+.flinks h4{font-size:13px;
+font-weight:700;color:#fff;
+margin-bottom:16px;
+text-transform:uppercase;
+letter-spacing:0.06em}
+.flinks ul{list-style:none}
+.flinks ul li{margin-bottom:10px}
+.flinks ul li a{font-size:14px;
+color:rgba(255,255,255,0.5);
+transition:color 0.2s;
+text-decoration:none}
+.flinks ul li a:hover{color:#fff}
+.fbot{display:flex;
+justify-content:space-between;
+align-items:center;padding-top:24px;
+border-top:1px solid 
+rgba(255,255,255,0.1);
+flex-wrap:wrap;gap:16px}
+.fbot p{font-size:13px;
+color:rgba(255,255,255,0.4)}
+.fleg{display:flex;gap:20px}
+.fleg a{font-size:13px;
+color:rgba(255,255,255,0.4);
+transition:color 0.2s;
+text-decoration:none}
+.fleg a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="ni">
+<div class="logo">
+<div class="bars">
+<div class="bar b1"></div>
+<div class="bar b2"></div>
+<div class="bar b3"></div>
+</div>
+<span class="lt">GroWell</span>
+</div>
+<div style="display:flex;
+align-items:center;gap:24px">
+<a href="#problem" 
+style="font-size:14px;font-weight:500;
+color:rgba(255,255,255,0.6);
+text-decoration:none">
+Problem</a>
+<a href="#how-it-works"
+style="font-size:14px;font-weight:500;
+color:rgba(255,255,255,0.6);
+text-decoration:none">
+How It Works</a>
+<a href="#team"
+style="font-size:14px;font-weight:500;
+color:rgba(255,255,255,0.6);
+text-decoration:none">
+Team</a>
+<a href="#contact" class="nb">
+Request Demo</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hw">
+<div class="badge">
+<div class="dot"></div>
+Now Accepting Pilot Partners
+</div>
+<h1>Transforming Pediatric Health By Making Preventative Care <span>Scalable</span></h1>
+<p class="tl">AI-Powered. Equitable. Healthier Futures.</p>
+<p class="sub">GroWell is a pediatric nutrition risk-detection and care-coordination platform that identifies at-risk children earlier and connects them to care faster.</p>
+<div class="btns">
+<a href="#contact" class="bw">Request a Demo</a>
+<a href="#how-it-works" class="bo">See How It Works</a>
+</div>
+<div class="chips">
+<span style="font-size:12px;
+color:rgba(255,255,255,0.4);
+font-weight:500">
+Trusted infrastructure:</span>
+<span class="chip">HIPAA Compliant</span>
+<span class="chip">IRB Validation In Progress</span>
+<span class="chip">SMART on FHIR Roadmap</span>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+<div class="si">
+<div>
+<div class="sn sr">1 in 3</div>
+<div class="sl">US children with nutrition risk</div>
+</div>
+<div>
+<div class="sn so">70%</div>
+<div class="sl">Risk goes undetected</div>
+</div>
+<div>
+<div class="sn sg">889+</div>
+<div class="sl">Children screened</div>
+</div>
+<div>
+<div class="sn sw">~70%</div>
+<div class="sl">True positive detection rate</div>
+</div>
+</div>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec" id="problem">
+<div class="w">
+<div class="cen">
+<span class="tag">The Problem</span>
+<h2>Pediatric Nutrition Risk Is a <span>Silent Crisis</span></h2>
+<p class="lead">Most nutrition-related health risks in children go undetected until they become expensive, difficult-to-treat conditions.</p>
+</div>
+<div class="g3">
+<div class="card cr">
+<div class="bn">1 in 3</div>
+<h3>Children At Risk</h3>
+<p>US children have at least one nutrition-related health problem impacting growth and development.</p>
+<p class="src">¹ CDC NCHS, 2023</p>
+</div>
+<div class="card co">
+<div class="bn">70%</div>
+<h3>Goes Undetected</h3>
+<p>Of nutrition risk is missed in standard pediatric care — leaving children without timely intervention.</p>
+<p class="src">² ASPEN Clinical Guidelines</p>
+</div>
+<div class="card cg">
+<div class="bn">$50B+</div>
+<h3>Avoidable Costs</h3>
+<p>In annual avoidable healthcare costs from preventable pediatric nutrition and care failures.</p>
+<p class="src">³ Milken Institute Report</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec seca" id="how-it-works">
+<div class="w">
+<div class="cen">
+<span class="tag">How It Works</span>
+<h2>From First Question to <span>Closed-Loop Care</span></h2>
+<p class="lead">GroWell connects caregivers, pediatricians, and specialists through a single intelligent workflow.</p>
+</div>
+<div class="g4">
+<div class="step">
+<div class="stn">1</div>
+<div class="sti">📱</div>
+<h3>Screen</h3>
+<p>Caregiver completes PANDA digital screening in minutes from any device before or during the visit.</p>
+</div>
+<div class="step">
+<div class="stn">2</div>
+<div class="sti">🧠</div>
+<h3>Analyze</h3>
+<p>Clinical risk scoring engine evaluates responses in real time and flags risks across 6 age groups.</p>
+</div>
+<div class="step">
+<div class="stn">3</div>
+<div class="sti">🔀</div>
+<h3>Route</h3>
+<p>Results routed instantly to provider dashboard. Pediatrician reviews and acts with one click.</p>
+</div>
+<div class="step">
+<div class="stn">4</div>
+<div class="sti">🔄</div>
+<h3>Coordinate</h3>
+<p>Referral packets generated, follow-up tracked, loop closed. No child falls through the cracks.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="sec" id="platform">
+<div class="w">
+<div class="cen">
+<span class="tag">The Platform</span>
+<h2>Built for Everyone in the <span>Care Journey</span></h2>
+<p class="lead">One platform. Three powerful interfaces. Complete care coordination.</p>
+</div>
+<div class="g3">
+<div class="vc">
+<div class="vi">👨‍👩‍👧</div>
+<div class="vsub">For Caregivers</div>
+<h3>Simple Digital Screening</h3>
+<p>Complete the PANDA screening from any device in minutes.</p>
+<ul class="fl">
+<li>Age-appropriate questions</li>
+<li>Available before or during visit</li>
+<li>LEO AI guidance and support</li>
+<li>Personalized education content</li>
+</ul>
+</div>
+<div class="vc">
+<div class="vi">🩺</div>
+<div class="vsub">For Providers</div>
+<h3>Intelligent Provider Dashboard</h3>
+<p>Review structured risk summaries and coordinate care efficiently.</p>
+<ul class="fl">
+<li>Structured clinical summaries</li>
+<li>One-click referral generation</li>
+<li>Automated follow-up tracking</li>
+<li>Referral packet generation</li>
+</ul>
+</div>
+<div class="vc">
+<div class="vi">🏥</div>
+<div class="vsub">For Health Systems</div>
+<h3>Population-Level Analytics</h3>
+<p>Monitor nutrition risk trends and quality metrics across your entire population.</p
